@@ -241,6 +241,7 @@ body {
 header>h1 {
     margin: 0;
     font-size: 3em;
+    text-align: right;
     padding-top: 4em
 }
 
@@ -251,10 +252,6 @@ div.banner {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between
-}
-
-div.banner>img {
-    height: 100%
 }
 
 div.banner>div.status {
@@ -287,7 +284,9 @@ h4 {
     -webkit-font-feature-settings: "c2sc";
     font-feature-settings: "c2sc";
     font-variant: small-caps;
+    font-style: italic;
     margin: 2em 0 .5em
+    
 }
 
 [role=contentinfo] a {
