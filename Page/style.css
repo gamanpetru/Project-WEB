@@ -335,3 +335,33 @@ p.issue {
 p{
     text-align: justify
 }
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+	
+}
+
+.first th{
+  border: 0;
+
+}
+
+tr{
+  text-align: center;	
+}
+
+ul{
+ text-align: left;
+}
+
+li{
+ text-align: justify
+}
+
+.last td{
+ border-color: white;
+ border-bottom: none;
+}

@@ -124,11 +124,23 @@
                     <div class="form-group">
                         <label for="exampleInputText">University</label>
                         <input type="text" name="text" class="form-control" id="text" placeholder="text">
+                        <input type="button" value="   Remove user   " style="margin-top: 10px;" />
                     </div>
-                    <input type="button" value="   Remove   " />
+                   
                     <div class="flexContainer">
                         <input type="text" class="inputField" class="form-control" placeholder="Write advertisment">
-                        <button type="submit">Sent</button>
+                        <button type="submit" style="margin-left: 10px;">Sent</button>
+                    </div>
+                    <label  style="margin-top:10px;">Section for restriction on page:</label>
+                    <div class="flexContainer">
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                            <option selected>Choose page</option>
+                            <option value="1">Book</option>
+                            <option value="2">Search</option>
+                            <option value="3">Drugs</option>
+                            <option value="4">News</option>
+                        </select>
+                        <button type="submit" style="margin-left: 5px;">Place</button>
                     </div>
                 </fieldset>
             </form>
