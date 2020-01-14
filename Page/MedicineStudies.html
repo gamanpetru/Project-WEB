@@ -68,14 +68,15 @@
                 <ol role="directory">
                     <li><a href="#arhitecture"><span>5.1. </span>Arhitecture</a></li>
                     <li><a href="#response"><span>5.2. </span>Responses</a></li>
-                </ol></li>
+                </ol>
+            </li>
             <li><a href="#security"><span>6. </span>Security</a></li>
             <li><a href="#integrity"><span>7. </span>Security and integrity of data</a></li>
             <li><a href="#external-services"><span>8. </span>External services</a>
                 <ol role="directory">
                     <li><a href="#rapid-api"><span>8.1. </span>Symptom checker API</a></li>
                     <li><a href="#google-api"><span>8.2. </span>Google Books API</a></li>
-                    <li><a href="#drug-api"><span>8.3 </span>DrugBank API</a></li>
+                    <li><a href="#drug-api"><span>8.3. </span>DrugBank API</a></li>
                 </ol>
             </li>
             <li><a href="#userguide"><span>9. </span>User guide</a>
@@ -742,54 +743,71 @@
             </p>
 
             <p>
-                
+
             </p>
             <section id="arhitecture" role="arhitecture">
                 <h3><span>5.1. </span>Arhitecture</h3>
-                    <p>
-                        <span style="font-weight: bold;">Model View Controller or MVC</span> as it is popularly called, is a software design pattern for 
-                        developing web applications. A Model View Controller pattern is made up of the following three parts:
-                    </p>
-                    <ul>
-                        <li><span style="font-weight: bold;">Model</span> − The lowest level of the pattern which is responsible for maintaining data</li>
-                        <li><span style="font-weight: bold;">View</span> - This is responsible for displaying all or a portion of the data to the user.</li>
-                        <li><span style="font-weight: bold;">Controller</span> − Software Code that controls the interactions between the Model and View.</li>
-                    </ul>
-                    <p style="text-align: center;"><img height="400" width="250" src="images/MVC.jpg"></p>
+                <p>
+                    <span style="font-weight: bold;">Model View Controller or MVC</span> as it is popularly called, is a
+                    software design pattern for
+                    developing web applications. A Model View Controller pattern is made up of the following three
+                    parts:
+                </p>
+                <ul>
+                    <li><span style="font-weight: bold;">Model</span> − The lowest level of the pattern which is
+                        responsible for maintaining data</li>
+                    <li><span style="font-weight: bold;">View</span> - This is responsible for displaying all or a
+                        portion of the data to the user.</li>
+                    <li><span style="font-weight: bold;">Controller</span> − Software Code that controls the
+                        interactions between the Model and View.</li>
+                </ul>
+                <p style="text-align: center;"><img height="400" width="250" src="images/MVC.jpg"></p>
 
             </section>
             <section id="response" role="response">
                 <h3><span>5.2. </span>Responses</h3>
-                    <ul><h4>2xx SUCCESS</h4>
+                <ul>
+                    <h4>2xx SUCCESS</h4>
                     <ol>
-                        <li><span style="font-weight: bold;">200 OK</span> − Standard response for successful HTTP requests. 
+                        <li><span style="font-weight: bold;">200 OK</span> − Standard response for successful HTTP
+                            requests.
                             <ul>
                                 <li>GET -> contain entity correspond with request.</li>
                                 <li>POST -> contain entity describing the result. </li>
-                            </ul></li>
+                            </ul>
+                        </li>
                         <li><span style="font-weight: bold;">201 Created</span> - When an new user is created.</li>
                     </ol>
                 </ul>
-                <ul><h4>4xx Client errors</h4>
+                <ul>
+                    <h4>4xx Client errors</h4>
                     <ol>
-                        <li><span style="font-weight: bold;">401 Unauthorize</span> − Similar to 403 Forbidden. When the student wants to access some information 
+                        <li><span style="font-weight: bold;">401 Unauthorize</span> − Similar to 403 Forbidden. When the
+                            student wants to access some information
                             and he is not logged on application.</li>
-                        <li><span style="font-weight: bold;">411 Length Required</span> - When the user introduce more chars then is necessary.</li>
+                        <li><span style="font-weight: bold;">411 Length Required</span> - When the user introduce more
+                            chars then is necessary.</li>
                     </ol>
                 </ul>
-                <ul><h4>5xx Server errors</h4>
+                <ul>
+                    <h4>5xx Server errors</h4>
                     <ol>
-                        <li><span style="font-weight: bold;">501 Not Implemented</span> − Our web application is not implemented and after some time 
+                        <li><span style="font-weight: bold;">501 Not Implemented</span> − Our web application is not
+                            implemented and after some time
                             it won't implemented 100% and this error will appear frequently.</li>
-                        <li><span style="font-weight: bold;">411 Length Required</span> - When the user introduce more chars then is necessary.</li>
+                        <li><span style="font-weight: bold;">411 Length Required</span> - When the user introduce more
+                            chars then is necessary.</li>
                     </ol>
                 </ul>
-                <ul><h4>Unofficial codes</h4>
+                <ul>
+                    <h4>Unofficial codes</h4>
                     <ol>
-                        <li><span style="font-weight: bold;">420 Method Failure (Spring Framework)</span> − A deprecated response used by the Spring Framework 
+                        <li><span style="font-weight: bold;">420 Method Failure (Spring Framework)</span> − A deprecated
+                            response used by the Spring Framework
                             when a method has failed.</li>
-                        <li><span style="font-weight: bold;">526 Invalid SSL Certificate</span> - Maybe if out certificate is expired. This requires keeping track of expiration date
-                        of certificate.</li>
+                        <li><span style="font-weight: bold;">526 Invalid SSL Certificate</span> - Maybe if out
+                            certificate is expired. This requires keeping track of expiration date
+                            of certificate.</li>
                     </ol>
                 </ul>
             </section>
@@ -1000,7 +1018,8 @@
                     <h5>Step 2</h5>
                     <img height="100%" width="100%" src="images/L2.png">
                     <p>
-                        The student searched a book that contains "Heart diseases", after he pressed "Search" button. After he saw the results,
+                        The student searched a book that contains "Heart diseases", after he pressed "Search" button.
+                        After he saw the results,
                         he ordered the books ascendent by name.
                     </p>
                     <h5>Step 3</h5>
@@ -1011,7 +1030,8 @@
                     <h5>Step 4</h5>
                     <img height="100%" width="100%" src="images/L4.png">
                     <p>
-                        The student searched a drug named "Nurofen forte", after he pressed "Search" button. After he saw the description,
+                        The student searched a drug named "Nurofen forte", after he pressed "Search" button. After he
+                        saw the description,
                         he pressed on image that is for Nurofen Forte to see more details.
                     </p>
                     <h5>Step 5</h5>
@@ -1033,8 +1053,9 @@
                     <h5>Step 2</h5>
                     <img height="100%" width="100%" src="images/D2.png">
                     <p>
-                        The student searches "Neuronal problems" completing the specific field. He select continent, country, city and after pressed "Generate"
-                        button. He can see the filtered dataset. He clicked on dataset to see the specific graphs. 
+                        The student searches "Neuronal problems" completing the specific field. He select continent,
+                        country, city and after pressed "Generate"
+                        button. He can see the filtered dataset. He clicked on dataset to see the specific graphs.
                     </p>
                     <h5>Step 3</h5>
                     <img height="350" width="500" src="images/D3.png">
@@ -1049,7 +1070,8 @@
                     <h5>Step 5</h5>
                     <img height="100%" width="100%" src="images/D5.png">
                     <p>
-                        The student wanted to find "Hospital" by region (in Iasi). After he filled the fields he pressed on "Find" button.
+                        The student wanted to find "Hospital" by region (in Iasi). After he filled the fields he pressed
+                        on "Find" button.
                     </p>
                 </section>
                 <section id="help-use" role="help-use">
@@ -1062,12 +1084,14 @@
                     <h5>Step 2</h5>
                     <img height="100%" width="100%" src="images/H2.png">
                     <p>
-                        After the student read our terms he wanted to find more about our scope and information about our team.
+                        After the student read our terms he wanted to find more about our scope and information about
+                        our team.
                     </p>
                     <h5>Step 3</h5>
                     <img height="100%" width="100%" src="images/H3.png">
                     <p>
-                        After he become informed about our team, the student wanted to know something about our location.
+                        After he become informed about our team, the student wanted to know something about our
+                        location.
                     </p>
                     <h5>Step 4</h5>
                     <img height="100%" width="100%" src="images/H4.png">
@@ -1075,36 +1099,32 @@
             </section>
             <section id="video" role="video">
                 <h3><span>9.2. </span>Video demonstration</h3>
+                <video height="100%" width="100%" class="tab" controls>Your browser does not support the &lt;video&gt;
+                    tag.
+                    <source src="images/Website-video.mp4" />
+                </video>
             </section>
         </section>
         <section id="references" role="doc-references">
             <h2><span>5. </span>References</h2>
-            <section>
-                <h3><span>5.1. </span>References for Design Part (PART I)</h3>
-                <p>
-                    1. <a href="https://rapidapi.com/">Symptom Checker API and others API</a>
-                </p>
-                <p>
-                    2. <a href="https://developers.google.com/api-client-library/java/apis/books/v1">Book API from
-                        Google</a>
-                </p>
-                <p>
-                    3. <a href="https://www.accessdata.fda.gov/scripts/drugshortages/default.cfm">Drugs databases</a>
-                </p>
-                <p>
-                    4. <a href="https://bchi.bigcitieshealth.org/indicators/1827/searches/34444">Diseases indicators</a>
-                </p>
-                <p>
-                    5. <a href="https://ksah.in/introduction-to-web-scraping-with-java/">Web scrapping for Java</a>
-                </p>
-            </section>
-            <section>
-                <h3><span>5.2. </span>References for Projection Part (PART II)</h3>
-                <p>
-                    1. <a href="https://rapidapi.com/">Symptom Checker API and others API</a>
-                </p>
-            </section>
-            
+            <p>
+                1. <a href="https://rapidapi.com/">Symptom Checker API and others API</a>
+            </p>
+            <p>
+                2. <a href="https://developers.google.com/api-client-library/java/apis/books/v1">Book API from
+                    Google</a>
+            </p>
+            <p>
+                3. <a href="https://www.accessdata.fda.gov/scripts/drugshortages/default.cfm">Drugs databases</a>
+            </p>
+            <p>
+                4. <a href="https://bchi.bigcitieshealth.org/indicators/1827/searches/34444">Diseases indicators</a>
+            </p>
+            <p>
+                5. <a href="https://ksah.in/introduction-to-web-scraping-with-java/">Web scrapping for Java</a>
+            </p>
+
+
         </section>
     </section>
 </body>
